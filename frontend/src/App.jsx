@@ -16,7 +16,7 @@ export default function App() {
   }
   return (
     <>
-        {user ? (<ChatPage />) : (<LoginPage setUser={setUser} />)}
+        {user ? (<ChatPage username={user} />) : (<LoginPage setUser={setUser} />)}
     </>
   )
 
