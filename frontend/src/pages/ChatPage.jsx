@@ -16,7 +16,7 @@ export default function ChatPage({username}) {
 
   useEffect(() => {
     if (socket) return;
-    const ws = new WebSocket("ws://anniversary-avoid-via-butterfly.trycloudflare.com/");
+    const ws = new WebSocket("ws://localhost:3000/");
     ws.onopen = () => {
       ws.send(JSON.stringify({ type: "join", username }));
     }
